@@ -1,0 +1,811 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sora', sans-serif;
+}
+
+#bg {
+    background-image: linear-gradient(180deg, white 15%,rgb(203, 237, 251),rgb(163, 229, 255),rgb(80, 166, 242),rgb(25, 22, 210));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 660px;
+}
+/*NAVEGAÇÃO TOPO*/
+.topo{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    background-color: rgba(255, 255, 255);
+    width: 100%;
+    height: auto;
+    color: black;
+    letter-spacing: 3px;
+}
+
+.nm{
+    padding-left: 80px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.navegacao{
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 500;
+    padding-right: 100px;
+    text-decoration: none;
+    list-style: none;
+    top: 30px;
+}
+
+.navegacao li{
+    position:relative;
+}
+
+.navegacao li  ul{
+    position:absolute;
+    top: 30px;
+    left: 0;
+    display:none;
+    background-image: linear-gradient(to bottom, white, rgb(232, 252, 255));
+}
+
+.navegacao li:hover ul, .navegacao li.over ul{
+    display:block;
+}
+
+.navegacao li ul li{
+    display:block;
+    width:150px;
+    padding: 10px;
+}
+
+
+.btn_nav, .btn_nav2{
+    display: flex;
+    text-align: right;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+
+.navegacao ul{
+    z-index: 1;
+    margin-top: 0px;
+}
+
+.btn_nav:hover{
+    text-align: end;
+    border-bottom: 2px solid black;
+}
+
+/*MENU PRINCIPAL*/
+
+#menu{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 1200px;
+    height: 300px;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#formulario{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    margin-left: 30px;
+    position: relative;
+    display: block;
+    color: white;
+    padding-top: 30px;
+}
+
+.slogan{
+    color:black;
+    font-weight: bold;
+    font-size: 40px;
+    padding-right: 30px;
+}
+
+.ipt_form{
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    padding-left: 10px;
+}
+
+.simular{
+    width: 400px;
+    height: 103px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 3px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    font-size: 34px;
+    overflow: hidden;
+}
+
+.simular::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(20deg, black,white, black,white, black,white);
+    background-size: 50% 100%;
+    border-radius: inherit;
+}
+
+.simular:hover::before{
+    animation: borderAnimate 0.85s linear infinite;
+}
+
+@keyframes borderAnimate {
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+.simular span {
+    display: block;
+    background-color: #000;
+    padding: 30px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 2;
+}
+
+/*FOOTER*/
+footer{
+    display: inline-flexbox;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    bottom: -227px;
+    width: 100%;
+    height: auto;
+    color: white;
+    text-align: center;
+}
+
+.ft-logo{
+    padding: 20px;
+}
+
+h3 {
+    padding: 15px 0px;
+}
+
+.ft-dados{
+    padding: 10px;
+    display: flex;
+}
+
+.ft1, .ft2, .ft3{
+    text-align: center;
+    width: 33.33%;
+}
+
+.ft1 {
+    float: left;
+}
+
+.ft2 {
+    float: none;
+}
+
+.ft3 {
+    float: right;
+}
+
+.ft1 a,.ft2 a{
+    list-style: none;
+    text-align: center;
+    padding: 6px;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-weight: normal;
+}
+
+.ft3 button{
+    list-style: none;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.ft1 a:hover, .ft2 a:hover{
+    color: rgb(67, 84, 213);
+    cursor: pointer;
+}
+
+.ft3 button:hover{
+    cursor: pointer;
+    background-color: rgb(67, 84, 213);
+    font-weight: bold;
+}
+
+.whats, .email, .celular{
+    position: relative;
+    width: 50%;
+    padding: auto;
+}
+
+/*PAGE - SIMULAÇÃO*/
+
+#s_menu{
+    display: block;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    width: 1200px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+}
+
+#s_menu h1{
+    position: relative;
+    padding: 30px 0px 20px 0px;
+    font-size: 30px;
+    word-spacing: 10%;
+    font-family: 'Sora', sans-serif;
+    letter-spacing: 5px;
+}
+
+
+.simulacao{
+    width: 800px;
+    height: 430px;
+    background-color: rgba(229, 229, 229, 0.313);
+    backdrop-filter: blur(50px);
+    position: relative;
+    color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 1px black;
+}
+
+.simulacao div{
+    padding: 10px;
+}
+
+.simulacao label{
+    padding-right: 20px;
+}
+
+.range{
+    width: 200px;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.range:hover{
+    opacity: 1;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+  
+.range::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.p_area, .p_quarto{
+    font-size: 15px;
+    color: rgb(100, 100, 100);
+    font-style: italic;
+    position: relative;
+}
+
+.p_area{
+    left: 80%;
+    transform: translateX(-65%);
+}
+
+.p_quarto{
+    left: 75%;
+    transform: translateX(-60%);
+}
+
+#s_menu select{
+    position: relative;
+    left: 70px;
+    background-color: rgb(211, 211, 211);
+    text-align: center;
+    width: 150px;
+    height: 25px;
+}
+
+.select{
+    margin-bottom: 20px;
+}
+
+#range_area{
+    position: relative;
+    left: 40px;
+}
+
+#range_quartos{
+    position: relative;
+    left: 12px;
+}
+
+.calcular{
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+    background-color: #cacaca;
+    font-weight: bold;
+    box-shadow: #3e3e3f 4px 4px 0px;
+    border-radius: 5px;
+    transition: transform 200ms, box-shadow 200ms;
+}
+
+.calcular:hover{
+    cursor: pointer;
+}
+
+.calcular:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #3e3e3f 0px 0px 0px;
+}
+
+.valorfinal{
+    top: 10px;
+    font-size: 20px;
+    position: relative;
+    font-weight: bold;
+}
+
+/*HISTÓRIA*/
+
+.historia{
+    display: block;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    width: 900px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+    font-size: 20px;
+}
+
+.historia h1{
+    position: relative;
+    padding: 30px 0px 20px 0px;
+    font-size: 30px;
+    word-spacing: 10%;
+    font-family: 'Sora', sans-serif;
+    letter-spacing: 5px;
+}
+
+.historia span{
+    display: flex;
+    position: relative;
+    left: 0px;
+    right: auto;
+    padding-top: 30px;
+    line-height: 35px;
+}
+
+aside{
+    font-style: italic;
+    padding-top: 30px;
+    float: right;
+    right: 10px;
+    position: absolute;
+}
+
+/*CONTATO*/
+
+#c_menu h1{
+    position: relative;
+    padding: 30px 0px 80px 0px;
+    font-size: 30px;
+    word-spacing: 10%;
+    font-family: 'Sora', sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.contato{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 1200px;
+    height: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+#c_texto{
+    width: 50%;
+}
+
+#forms{
+    width: 50%;
+    margin-top: 30px;
+}
+
+.forms_1, .forms_2{
+    margin: 2px 0px;
+    padding-left: 10px;
+}
+
+.forms_1{
+    width: 200px;
+    height: 40px;
+}
+
+.forms_2{
+    width: 418px;
+    height: 150px;
+    padding-top: 0px;
+}
+
+#c_buttons button{
+    list-style: none;
+    text-align: center;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin: 40px 10px 0px 10px;
+    background-color: white;
+}
+
+#c_buttons button:hover{
+    cursor: pointer;
+    background-color: rgb(200, 200, 200);
+    font-weight: bold;
+}
+
+.enviar{
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+.enviar:hover{
+    cursor: pointer;
+    background-color: rgb(200, 200, 200);
+    font-weight: bold;
+}
+
+#forms_result{
+    position: absolute;
+    text-align: center;
+    margin-top: 140px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: block;
+    font-size: 20px;
+}
+
+.c_whats_img, .c_email_img, .c_cel_img{
+    position: relative;
+    width: 50%;
+    padding: auto;
+}
+
+#v_menu{
+    display: block;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+.casa_midia{
+    position: relative;
+    display: inline-flex;
+    margin-top: 30px;
+    padding-top: 70px;
+    width: 100%;
+    height: 500px;
+    top: -70px;
+}
+
+.info_casa, video, .fotos_casa{
+    width: 33.33%;
+    height: 100%;
+}
+
+.info_casa{
+    float: left;
+    display: block;
+    padding-left: -50px;
+}
+
+.info_casa p{
+    padding: 15px 0px 0px 90px;
+    text-align: left;
+}
+
+video{
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+    padding: 10px 50px;
+    background-color: transparent;
+}
+
+.fotos_casa{
+    float: right;
+    height: 100%;
+    padding-top: 30px;
+    overflow: hidden;
+    width: 40%;
+}
+
+.fotos_casa img{
+    width: 135px;
+    height: 180px;
+    border-radius: 3px;
+    padding-bottom: 5px;
+    cursor: zoom-in;
+    max-width: 100%;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.fotos_casa img:hover{
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+figcaption{
+    font-size: 13px;
+    font-style: italic;
+    color: gray;
+}
+
+/* RESPONSIVIDADE */
+
+#btn_mobile{
+    display: none;
+}
+
+@media (max-width: 767px){
+    .navegacao{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 120px;
+        left: 0px;
+        background: #c7c7c7;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active .navegacao{
+        height: calc(100vh - 370px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    .navegacao a{
+        padding: 1.3rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0,0,0,0.06);
+    }
+
+    .navegacao ul{
+        z-index: 1;
+        margin-top: 35px;
+    }
+
+    #btn_mobile{
+        display: flex;
+        padding: .5rem 2rem;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+    }
+    #hamburguer{
+        color: black;
+        display: block;
+        content: '';
+        border-top: 2px solid;
+        width: 20px;
+        right: 20px;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        background: currentColor;
+        position: relative;
+        transition: .3s;
+    }
+    #nav.active #hamburguer{
+        border-top-color: transparent
+    }
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    /*MENU*/
+
+    #menu{
+        display: block;
+    }
+    .simular{
+        display: flexbox;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        width: 20%;
+        height: 28.5%;
+        margin-top: 50px;
+    }
+
+    .simular span{
+        text-align: center;
+    }
+
+    .textos{
+        width: 80%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .textos h2{
+        display: block;
+        font-size: 22px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    /*FOOTER*/
+
+    footer{
+        font-size: 14px;
+    }
+    
+    .ft3 button{
+        margin-right: 25px;
+    }
+
+    /*VENDAS*/
+
+    .info_casa p{
+        font-size: 15px;
+         margin-left: -80px;
+         padding: 5px 0px 0px 90px;
+    }
+    video{
+        height: 300px;
+        padding: 50px 0px;
+    }
+    .fotos_casa{
+        float: right;
+        height: 100%;
+        padding-top: 50px;
+        width: 30%;
+    }
+    .fotos_casa img{
+        width: 60px;
+        height: 80px;
+    }
+    .simulacao{
+        width: 500px;
+    }
+    article span{
+        font-size: 13px;
+        width: 600px;
+        height: 200px;
+        padding-left: 80px;
+        line-height: -10px;
+    }
+    aside{
+        display: none;
+    }
+    .contato{
+        justify-content: center;
+        width: 600px;
+        height: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+    }
+    
+    #c_texto{
+        width: 30%;
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    
+    #forms{
+        width: 30%;
+        margin-top: 10px;
+    }
+    
+    .forms_1, .forms_2{
+        margin: 2px 0px;
+        padding-left: 10px;
+    }
+    
+    .forms_1{
+        width: 100px;
+        height: 20px;
+    }
+    
+    .forms_2{
+        width: 209px;
+        height: 75px;
+    }
+    #c_buttons button{
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        margin: 20px 5px 0px 5px;
+        background-color: white;
+    }
+}
+
+
